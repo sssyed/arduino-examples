@@ -5,10 +5,10 @@
 
 // constants won't change. They're used here to
 // set pin numbers:
-const int buttonPlayer2 = A0;     // the number of the pushbutton pin
+const int buttonPlayer2 = A0;     //
 const int buttonPlayer1 = A1;
-const int buzzerPlayer1 = 1;      // the number of the LED pin
-const int buzzerPlayer2 = 9;
+const int buzzerPlayer1 = 9;      //
+const int buzzerPlayer2 = 1;
 
 
 void setup() {
@@ -30,11 +30,11 @@ void loop(){
 
   if(digitalRead(buttonPlayer1) == HIGH){
     buzz(1);
+    delay(100);
   } else if(digitalRead(buttonPlayer2) == HIGH){
     buzz(2);
+    delay(100);
   }
-
-  delay(2000);
 }
 
 
