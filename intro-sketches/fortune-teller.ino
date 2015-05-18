@@ -1,4 +1,3 @@
-
 // Made by Syed Salahuddin
 // License: CC-BY-SA 3.0
 
@@ -14,7 +13,6 @@ const int buttonPin = A0;     // the number of the pushbutton pin
 const int servoPin = 5;    // the number of the Optional Buzzer pin
 const int i = 0;
 
-// variables to remember some important values
 int buttonState = 0;     // data for storing if our button has been pressed.
 int randomNumber = 0;		//  data for storing a "random" number.
 bool getRandomNumber = false;
@@ -25,6 +23,7 @@ bool changeDirection = false;
 void setup() {
   // initialize the Servo as an output:
   pinMode(servoPin, OUTPUT);
+
   // initialize the pushbutton pin as an input:
   pinMode(buttonPin, INPUT);
   // Get a random number
@@ -42,7 +41,7 @@ void loop(){
   if(getRandomNumber == false){
   	randomNumber = random(3);
   }
-  // check if the pushbutton is pressed.
+
   if (buttonState == HIGH) {
     Serial.print(randomNumber);
     delay( 50 );
