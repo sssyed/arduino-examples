@@ -3,47 +3,45 @@
 // Made by Syed Salahuddin
 // License: CC-BY-SA 3.0
 
-// constants won't change. They're used here to
-// set pin numbers:
-const int buttonPlayer2 = A0;     //
-const int buttonPlayer1 = A1;
-const int buzzerPlayer1 = 9;      //
-const int buzzerPlayer2 = 1;
+//let's tell our arduino which input and output snaps we're working with.
+const int buttonPlayer2 = A0;   //input button on a0, needs power
+const int buttonPlayer1 = A1;	//input buttonon a1, needs power
+const int buzzerPlayer1 = 9;    //output buzzer on d9
+const int buzzerPlayer2 = 1;	//output buzzer on d1
 
 
 void setup() {
-  // initialize the buzzer pin as an output:
+  // initialize the buzzers as output:
   pinMode(buzzerPlayer1, OUTPUT);
   pinMode(buzzerPlayer2, OUTPUT);
-  // initialize the pushbutton pin as an input:
+  // initialize the pushbutton as input:
   pinMode(buttonPlayer1, INPUT);
   pinMode(buttonPlayer2, INPUT);
-  // Get a random number
-
 }
 
 
 void loop(){
-  // read the state of the pushbutton value:
+  //let's reset our buzzers
   digitalWrite(buzzerPlayer1, LOW);
   digitalWrite(buzzerPlayer2, LOW);
 
+  // read the state of the pushbutton value for the first then the next:
   if(digitalRead(buttonPlayer1) == HIGH){
-    buzz(1);
+    buzz(1, buttonPlayer1);
     delay(100);
   } else if(digitalRead(buttonPlayer2) == HIGH){
-    buzz(2);
+    buzz(2, buttonPlayer2);
     delay(100);
   }
 }
 
-
-void buzz(int playerNumber){
+// a block of code that handles our buzzing!
+void buzz(int playerNumber, int player){
 
   if(playerNumber == 1){
-    digitalWrite(buzzerPlayer1, HIGH);
-  } else if(playerNumber){
-    digitalWrite(buzzerPlayer2, HIGH);
+    digitalWrite(player, HIGH);
+  } else if(playerNumber){ //add more else if statements to increase players
+    digitalWrite(player, HIGH);
   }
 
 }

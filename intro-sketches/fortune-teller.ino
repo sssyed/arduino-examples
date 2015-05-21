@@ -58,28 +58,30 @@
     }
 
     void moveServo(int fortune){
-
-      if(fortune == 1){
+      //yes
+      if(fortune == 0){
         analogWrite(5, 0);
         delay(2000);
-      } else if(fortune == 2) {
-        //turn thumb to down position
+      } else if(fortune == 1) {
+        //no
         analogWrite(5, 125);
         delay(2000);
         } else {
-        //turn thumb sides as "maybe"
-        analogWrite(5, 245);
+        //maybe so
+        analogWrite(5, 230);
         delay(2000);
       }
+      getRandomNumber = false;
+
     }
 
     void attractMode(){
       analogWrite(5, 0);
-      delay(500);
+      delay(300);
 
       analogWrite(5, 128);
-      delay(500);
+      delay(100);
 
-      analogWrite(5, 250);
-      delay(500);
+      analogWrite(5, 230);
+      delay(300);
     }
