@@ -59,6 +59,12 @@
 
     void moveServo(int fortune){
       //yes
+      analogWrite(5, 0);
+      analogWrite(5, 125);
+      analogWrite(5, 230);
+
+
+
       if(fortune == 0){
         analogWrite(5, 0);
         delay(2000);
@@ -76,12 +82,15 @@
     }
 
     void attractMode(){
-      analogWrite(5, 0);
-      delay(300);
-
-      analogWrite(5, 128);
-      delay(100);
-
-      analogWrite(5, 230);
-      delay(300);
+      int ran_num = random(3);
+      if(ran_num == 1){
+        analogWrite(5, 0);
+        delay(500);
+      } else if(ran_num == 2){
+        analogWrite(5, 128);
+        delay(500);
+      }else {
+        analogWrite(5, 230);
+        delay(500);
+      }
     }
