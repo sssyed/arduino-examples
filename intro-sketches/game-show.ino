@@ -25,23 +25,14 @@ void loop(){
   digitalWrite(buzzerPlayer1, LOW);
   digitalWrite(buzzerPlayer2, LOW);
 
-  // read the state of the pushbutton value for the first then the next:
+  // read the state of the pushbutton value for the first:
   if(digitalRead(buttonPlayer1) == HIGH){
-    buzz(1, buttonPlayer1);
+    //buzz!
+    digitalWrite(buttonPlayer1, HIGH);
     delay(100);
   } else if(digitalRead(buttonPlayer2) == HIGH){
-    buzz(2, buttonPlayer2);
+    //buzz!
+    digitalWrite(buttonPlayer2, HIGH);
     delay(100);
   }
-}
-
-// a block of code that handles our buzzing!
-void buzz(int playerNumber, int player){
-
-  if(playerNumber == 1){
-    digitalWrite(player, HIGH);
-  } else if(playerNumber){ //add more else if statements to increase players
-    digitalWrite(player, HIGH);
-  }
-
 }

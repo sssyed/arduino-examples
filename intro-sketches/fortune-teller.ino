@@ -9,12 +9,12 @@
      */
 
     // set pin numbers to represent our bits:
-    const int buttonPin = A0;     // the number of the pushbutton pin
-    const int servoPin = 5;    // the number of the Optional Buzzer pin
+    const int buttonPin = A0;
+    const int servoPin = 5;
     const int i = 0;
 
-    int buttonState = 0;     // data for storing if our button has been pressed.
-    int randomNumber = 0;		//  data for storing a "random" number.
+    int buttonState = 0;
+    int randomNumber = 0;
     bool getRandomNumber = false;
 
 
@@ -24,13 +24,9 @@
 
       // initialize the pushbutton pin as an input:
       pinMode(buttonPin, INPUT);
-      // Get a random number
-
     }
 
     void loop(){
-      //analogWrite(5, 10);
-
 
       if(getRandomNumber == false){
         attractMode();
@@ -58,12 +54,9 @@
     }
 
     void moveServo(int fortune){
-      //yes
       analogWrite(5, 0);
       analogWrite(5, 125);
       analogWrite(5, 230);
-
-
 
       if(fortune == 0){
         analogWrite(5, 0);
