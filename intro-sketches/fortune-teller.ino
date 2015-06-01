@@ -82,15 +82,10 @@
     }
 
     void attractMode(){
-      int ran_num = random(3);
-      if(ran_num == 1){
         analogWrite(5, 0);
-        delay(500);
-      } else if(ran_num == 2){
+        delay(255);
         analogWrite(5, 128);
-        delay(500);
-      }else {
-        analogWrite(5, 230);
-        delay(500);
-      }
+        delay(128);
+        analogWrite(5, 245);
+        delay(255);
     }
