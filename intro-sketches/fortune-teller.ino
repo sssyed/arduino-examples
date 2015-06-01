@@ -76,9 +76,9 @@
 
     void attractMode(){
         analogWrite(5, 0);
-        delay(300);
+        delay(200);
         analogWrite(5, 128);
         delay(150);
         analogWrite(5, 230);
-        delay(300);
+        delay(200);
     }
