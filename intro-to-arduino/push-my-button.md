@@ -28,6 +28,21 @@ We're going to read the value of an input (in this case a button) and print that
 
     }
 
+### Variables!
+
+### Expressions!
+
+### Arguments!
+
+### New functions (OH MY!)
+
+
 ### The Expected Outcome!
 
-In your serial monitor, you should be able to see lot's of 0's'
+In your serial monitor, you should be able to see lot's of **0**'s when you're not pushing a button and **1023** when you are.
+
+Think of the button as a dam that is holding back the electricty from your power bit to flow to your Arduino. When the button is pressed the current flows openly at full force (1023). The Arduino has the ability to read the flow of the current coming through.
+
+### 1023? Yeah you know me!
+
+1023 is an **10 bit binary value** all that means is your analogRead input will be either 0 and 1023 when using a button. The Arduino **assigns** a value to the **amount** of current that is coming in through it's **circuit**. Try replacing the the **button** with a **slider** or a **dimmer** and see what happens!
