@@ -46,7 +46,7 @@ Ok now our Arduino won't do much because just like our friend frankenstein we'll
 
 No now to check everything is order we press the ![❤](http://arduino.cc/en/uploads/Guide/export.png) and hopefully you'll see some lights flash on your Arduino and we'll have our very first program on our Arduino.
 
-**If things go wrong** don't fear, let's do a little **troubleshooting**:
+**If things go wrong** don't fear, let's do a little **troubleshooting** (needs video):
   - Try restarting your computer.
   - Unplug your Arduino and plug it back in.
   - Make sure the right **port** and **board** are selected.
@@ -105,7 +105,7 @@ The section after the parentheses **()** and in between the curly braces **{ }**
 
     void setup() {  
 
-      Serial.begin();
+      Serial.begin(9600);
 
     }
 
@@ -126,18 +126,45 @@ Our second command is the **loop()** just like it implies it runs code over and 
 
 ### Let's fire it up!
 
+Once you've typed up the sample code, hit the upload button found in the tool bar. It looks like this: ![❤](http://arduino.cc/en/uploads/Guide/export.png)
+
+![❤](https://raw.githubusercontent.com/Makeblock-official/XY-Plotter-2.0/master/images/Upload.png)
+
+### The Expected Outcome!
 
 
-### Punctuation saves lives
+### Why you bugging?
 
-Continuing on that thread we  
+####In case you're seeing errors like this:
 
+![❤](https://startingelectronics.org/software/arduino/learn-to-program-course/01-program-structure-flow/compile-error.jpg)
+
+Most common errors when you first program are **syntax** errors ! Remember that
+
+    Serial.begin(9600);
+
+Needs a semicolon at the end of a **statement**
+
+and that you need you need type your code in the right **functions** between the **{ }** curly braces.
+
+**uploading errors!**
+
+  - like a mentioned before this should not take more then a few mins. 
+
+### Change your message!
+
+Each time you make changes to your code don't forget to upload.
+
+
+###Why we do the things we do.
+
+This code is an example of how you can communicate with your Arduino. And use that to talk to other programs on your computer like proccessing...etc.
 
 ###TL;DR
 - install [this](http://www.arduino.cc/en/Main/Softwarehere)!
 - choose the right Arduino board and port
 ![❤](http://www.pubnub.com/blog/wp-content/uploads/2015/03/arduino-1.gif)
-- hook-up the correct bits
+- power **and** hook-up the Arduino to your computer.
 ![❤](http://cdn.instructables.com/F80/7PTZ/HXLDB6DH/F807PTZHXLDB6DH.MEDIUM.jpg)
 - type in the sample code, then hit upload ![❤](http://arduino.cc/en/uploads/Guide/export.png)
       void setup() {  
@@ -147,4 +174,4 @@ Continuing on that thread we
         Serial.println("hello littleWorld!");
       }
 - and check out your message in the [serial monitor](http://www.arduino.cc/en/Guide/Environment#serialmonitor)  ![❤](http://arduino.cc/en/uploads/Guide/serial_monitor.png).
-- if you have trouble try restarting your computer, or reseting your Arduino by unplugging and replugging your Arduino.
+- if you have trouble try restarting your computer, or reseting your Arduino by unplugging and replugging it. Look for syntax errors, the line number is on the bottom left and printed in the **console**
