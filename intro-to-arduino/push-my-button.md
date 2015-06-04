@@ -57,7 +57,7 @@ utility belt:
 
       "hello littleWorld!"`
 
-  inside of `Serial.println()`. Note the quotation marks!
+  inside of `Serial.println();`. Note the quotation marks!
 
 
 ### "Let's not get into an argument"
@@ -99,18 +99,66 @@ utility belt:
 
     }
 
-### New stuff!
-  You'll notice that there are a few new lines of
+### And the circuit!
 
+  hook-up a `P1 power bit` to a `button` and into the `a0` bitsnap.
+
+### New stuff!
+
+  You'll notice that there are some lines of code you haven't seen before. Let's check them out!
+
+### Variable: Buckets and buckets of data
+
+  Variables! Our first line of code is a `variable` in this case a number or `integer` that is assigned or given the name `button`. You can name it whatever you want but just don't start the name with numbers or have spaces. If you need spaces use underscores for now.
+
+    int button = A0;
+
+  You'll notice that we're using A0, if you check out the circuit we just buil that there is a bit snap labeled `a0`. That's the bitsnap we'll be using for our `INPUT`.
+
+  ![mahbucket](http://4.bp.blogspot.com/-TNx3jC0imfw/Ui-rqAR9FhI/AAAAAAAAACE/cmqUf2JGqiY/s1600/bucket.png)
+  src: khan academy
+
+  In it's most primitive sense Variables are labeled buckets of data that let us "hold" on to `numbers` or `strings` or other kinds of `expresssions`. Meaning that if you wanted to reuse the number `9600` but call it something like `speed_limit` so it's more "human readable" then you would use a variable. For example:
+
+    String message = "I'd love a slice of pizza today";
+
+
+    Serial.printn(message);
+
+  We just `assigned` our pizza loving string to a `variable` called message.
+
+
+### State your case!
+
+  One more detail to cover as we move on to the   to even more tasty concepts. Each time we `assign` a variable it's called a `statement`. Cause they `state` of a program, we'll talk about them in detail in the future.
 
 
 ### New functions / commands for the Arduino (OH MY!)
+Let's check out pinMode()
+
+    pinMode(button, INPUT)
+
+We know it's a function because it has `()` at the end of it and we know it takes `two` `arguments` the first being `button` that is a `variable` (which we assigned to A0) and a `mode ` that's either `INPUT` (like a `button` or `slider`) or `OUTPUT` like a `bargraph`.
+
+  On to analogRead()
 
 
+    analogRead(button)
 
-### Keep your comments in your pocket
+  Now you'll notice we're encountering another function, this one is especially important it let's the Arduino tell us if a button has been pressed or not.
+
+### Let's flash our Arduino! (no, not that kind of flashing)
+
+Once you've typed up the sample code, hit the upload button found in the tool bar. It looks like this: ![❤](http://arduino.cc/en/uploads/Guide/export.png)
+
+![❤](https://raw.githubusercontent.com/Makeblock-official/XY-Plotter-2.0/master/images/Upload.png)
+
+This will `flash` the memory in our Arduino so it can run our program!
+
 
 ### The Expected Outcome!
+
+  [pic]
 
   In your serial monitor, you should be able to see lot's of **0**'s when you're not pushing a button and **1023** when you are.
 
@@ -120,4 +168,10 @@ utility belt:
 
   1023 is an **10 bit binary value** all that means is your analogRead input will be either 0 and 1023 when using a button. The Arduino **assigns** a value to the **amount** of current that is coming in through it's **circuit**. Try replacing the the **button** with a **slider** or a **dimmer** and see what happens!
 
-###Part `2`: You light up my life
+### You made it!!!
+
+  Congrats we're one step closer to being Arduino pros!
+
+  Here's an emoji for all your hard work: 🎉
+
+  On to the next tutorial: you light up my life.

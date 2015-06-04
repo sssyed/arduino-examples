@@ -142,6 +142,7 @@
 
 ### The Expected Outcome!
 
+[pic]
 
 ### Why you bugging?
 
@@ -169,6 +170,12 @@ Each time you make changes to your code don't forget to upload.
 ###Why we do the things we do.
 
 This code is an example of how you can communicate with your Arduino. And use that to talk to other programs on your computer like proccessing...etc.
+
+### You made it!!!
+
+  Congrats we're one step closer to being Arduino pros!
+
+  Here's an emoji for all your hard work: 🎊
 
 ###TL;DR
 - install [this](http://www.arduino.cc/en/Main/Softwarehere)!

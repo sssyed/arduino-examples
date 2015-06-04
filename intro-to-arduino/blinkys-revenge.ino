@@ -4,17 +4,18 @@
 ** @license: CC-BY-SA 3.0
 */
 
-int button = A0;
+int bargraph = 5;
 
 void setup(){
 
   Serial.begin(9600);
-  pinMode(button, INPUT);
+  pinMode(bargraph, OUTPUT);
 
 }
 
 void loop(){
 
-  Serial.println(analogRead(button));
+  analogWrite(bargraph, 1023);
+
 
 }
