@@ -44,7 +44,9 @@
 
 ### Flipping the programming switch
 
-  No now to check everything is order we press the ![❤](http://arduino.cc/en/uploads/Guide/export.png) and hopefully you'll see some lights flash on your Arduino and we'll have our very first program on our Arduino.
+  Ok now we need to check everything is order we press the ![❤](http://arduino.cc/en/uploads/Guide/export.png) and hopefully you'll see some lights flash on your Arduino and we'll have our very first program **flashed** on to our Arduino.
+
+  The Arduino is equipped with a tiny bit of **memory** that allows it to save our program so when we unplug the device and turn it back on it will run program that was last uploaded.
 
   **If things go wrong** don't fear, let's do a little **troubleshooting** (needs video):
   - Try restarting your computer.
@@ -124,7 +126,9 @@
 
   In this case we're using **Serial** no not the stuff you eat but a form of communication that let's us **speak** to the Arduino. Kind of like the sounds that come out of our mouths.
 
-  **.begin()** tells the Arduino to start the communication. You'll notice that there is a **dot** that separate's Serial and begin that is yet another syntax rule. Don't worry you'll remember all of this as you keep coding!
+  **.begin(9600)** tells the Arduino to start the communication. You'll notice that there is a **dot** that separate's Serial and begin that is yet another syntax rule. Don't worry you'll remember all of this as you keep coding!
+
+  The **9600** tells the Arduino how fast it should talk to us. For most of the most part **9600** for what we're going to be doing.
 
   NOTE: Right after our **function name** we have two **parentheses** every function has them just like you have a **type** and a **name**. Think of it as a **punctuation** mark. More on that in a bit.
 
